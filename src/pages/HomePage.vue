@@ -33,18 +33,7 @@ export default {
 
 
 <template>
-    <app-loader v-if="isLoading"></app-loader>
-    <!-- videogames -->
-    <div v-else class="container">
-        <error-alert :hasError="hasError" @close="hasError = false"></error-alert>
-
-        <video-game-details v-if="videogames.length" :videogames="videogames"></video-game-details>
-
-        <div v-else class="text-center mt-5">
-            <h2>There aren't projects to show.</h2>
-        </div>
-
-    </div>
+    <AppLoader />
 </template>
 
 
