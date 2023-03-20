@@ -1,6 +1,6 @@
 <script>
 export default {
-
+    name: 'ContactPage'
 }
 </script>
 
@@ -17,11 +17,14 @@ export default {
                     <label for="suggestion" class="form-label text-light">Suggerisci un articolo</label>
                     <textarea class="form-control" id="suggestion" name="suggestion" rows="10"></textarea>
                 </div>
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center mb-5">
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter">
                         <label class="form-check-label text-light" for="newsletter">Iscriviti alla newsletter</label>
                     </div>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-primary">Invia</button>
                 </div>
             </form>
         </div>
