@@ -10,6 +10,7 @@ export default {
 
 <template>
     <AppLoader />
+    <GameList />
 </template>
 
 
