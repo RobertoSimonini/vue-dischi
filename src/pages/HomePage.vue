@@ -1,17 +1,16 @@
 <script>
-import axios from 'axios'
+import axios from 'axios';
+import GameList from '../components/Videogames/GameList.vue';
 export default {
-name:'HomePage'
+    name: 'HomePage',
+    components: { GameList },
 }
 </script>
 
 
 <template>
-
-
+    <GameList />
 </template>
 
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
