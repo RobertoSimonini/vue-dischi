@@ -8,7 +8,6 @@ name:'HomePage'
 
 <template>
 
- <AppLoader />
 
 </template>
 
