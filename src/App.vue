@@ -8,6 +8,7 @@ export default {
 
 <template>
 
+  <h1 class="text-primary text-center my-3">Ciao World </h1>
 
 </template>
 
