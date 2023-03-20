@@ -1,10 +1,11 @@
 <script>
 import VideoGameDetails from './VideoGameDetails.vue';
+import GameList from '../components/Videogames/GameList.vue';
 import axios from 'axios'
 const apiBaseUrl = 'http://localhost:8000/api/';
 export default {
     name: 'HomePage',
-    components: { VideoGameDetails },
+    components: { VideoGameDetails, GameList },
     data() {
         return {
             videogames: [],
@@ -33,7 +34,6 @@ export default {
 
 <template>
     <app-loader v-if="isLoading"></app-loader>
-
     <!-- videogames -->
     <div v-else class="container">
         <error-alert :hasError="hasError" @close="hasError = false"></error-alert>
