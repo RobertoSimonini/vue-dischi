@@ -9,11 +9,9 @@ export default {
 </script>
 
 <template>
-    <div class="container my-5">
-        <div class="row-cols-4 row align-items-stretch">
-            <div class="col d-flex " v-for="videogame in videogames" :key="videogame.id">
-                <CardGame :videogame="videogame" :isDetail="false" />
-            </div>
+    <div class="row-cols-4 row align-items-stretch">
+        <div class="col d-flex " v-for="videogame in videogames" :key="videogame.id">
+            <CardGame :videogame="videogame" :isDetail="false" />
         </div>
     </div>
 </template>
