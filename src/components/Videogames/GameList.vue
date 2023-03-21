@@ -1,25 +1,18 @@
 <script>
+import CardGame from './CardGame.vue'
 export default {
     name: 'GameList',
-    components: {}
+    components: { CardGame },
+    props: { videogames: Array }
 }
 
 </script>
 
 <template>
     <div class="container my-5">
-        <div class="row">
-            <div class="col-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-center mb-0 mt-3">Titolo del gioco</h5>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item text-center text-warning"><strong class="text-dark">Vote: </strong>Numero
-                        </li>
-                    </ul>
-                </div>
+        <div class="row-cols-4 row align-items-stretch">
+            <div class="col d-flex " v-for="videogame in videogames" :key="videogame.id">
+                <CardGame :videogame="videogame" :isDetail="false" />
             </div>
         </div>
     </div>
