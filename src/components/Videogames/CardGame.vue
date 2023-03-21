@@ -8,8 +8,12 @@ export default {
 </script>
 
 <template>
-    <div class="card mb-3">
-        <div class="g-0" :class="{ 'row': isDetail }">
+    <router-link :to="{ name: 'contact' }" class="card mb-3 text-dark text-decoration-none">
+        <div class="overlay justify-content-center align-items-center">
+            <i v-for="n in 5" class="fa-star text-warning mx-1 fs-5"
+                :class="n <= videogame.vote ? 'fa-solid' : 'fa-regular'"></i>
+        </div>
+        <div class="g-0 cover" :class="{ 'row': isDetail }">
             <div :class="{ 'col-md-4': isDetail }">
                 <img v-if="videogame.img_url" :src="videogame.img_url" class="card-img-top" :alt="videogame.title">
             </div>
@@ -22,18 +26,44 @@ export default {
                         <li class="list-group-item"><strong>Producer: </strong>{{ videogame.producer }}</li>
                         <li class="list-group-item"><strong>Pegi: </strong>{{ videogame.pegi }}</li>
                         <li class="list-group-item"><strong>Platform: </strong>{{ videogame.platform }}</li>
-                        <li class="list-group-item text-warning"><strong class="text-dark">Vote:
-                            </strong>{{ videogame.vote }}</li>
+                        <li class="list-group-item text-warning caption"><strong class="text-dark">Vote:</strong>{{
+                            videogame.vote }}</li>
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
+    </router-link>
 </template>
 
 
 <style lang="scss" scoped>
-img {
-    height: 100%;
+.card {
+
+    position: relative;
+    cursor: pointer;
+
+    .overlay {
+        display: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: #000000;
+        border-radius: 5px;
+    }
+
+    img {
+        height: 100%;
+
+    }
+
+    // &:hover .cover {
+    //     display: none;
+    // }
+
+    &:hover .overlay {
+        display: flex;
+    }
 }
 </style>  
