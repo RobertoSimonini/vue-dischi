@@ -10,7 +10,7 @@ export default {
 <template>
     <!-- <main class="container my-5"> -->
     <router-link :to="{ name: 'videogame-details', params: { id: videogame.id } }"
-        class="card my-5 text-dark text-decoration-none">
+        class="card my-5 text-dark text-decoration-none p-2">
         <div v-if="!isDetail" class="overlay justify-content-center align-items-center">
             <i v-for="n in 5" class="fa-star text-warning mx-1 fs-5"
                 :class="n <= videogame.vote ? 'fa-solid' : 'fa-regular'"></i>
