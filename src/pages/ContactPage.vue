@@ -14,6 +14,10 @@ export default {
                     <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
                 </div>
                 <div class="mb-5">
+                    <label for="subject" class="form-label text-light">Oggetto</label>
+                    <input type="text" class="form-control" id="subject" name="subject">
+                </div>
+                <div class="mb-5">
                     <label for="suggestion" class="form-label text-light">Suggerisci un articolo</label>
                     <textarea class="form-control" id="suggestion" name="suggestion" rows="10"></textarea>
                 </div>
