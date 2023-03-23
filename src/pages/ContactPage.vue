@@ -18,13 +18,13 @@ export default {
                     <input type="text" class="form-control" id="subject" name="subject">
                 </div>
                 <div class="mb-5">
-                    <label for="suggestion" class="form-label text-light">Suggerisci un articolo</label>
-                    <textarea class="form-control" id="suggestion" name="suggestion" rows="10"></textarea>
+                    <label for="message" class="form-label text-light">Suggerisci un articolo</label>
+                    <textarea class="form-control" id="message" name="message" rows="10"></textarea>
                 </div>
                 <div class="d-flex justify-content-center mb-5">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter">
-                        <label class="form-check-label text-light" for="newsletter">Iscriviti alla newsletter</label>
+                        <input class="form-check-input" type="checkbox" id="subscription" name="subscription">
+                        <label class="form-check-label text-light" for="subscription">Iscriviti alla newsletter</label>
                     </div>
                 </div>
                 <div class="d-flex justify-content-end">
